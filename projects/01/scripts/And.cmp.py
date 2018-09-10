@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-fout = open("And.cmp", 'w')
+fout = open("../And.cmp", 'w')
 
 fout.write("|   a   |   b   |  out  |\n")
 

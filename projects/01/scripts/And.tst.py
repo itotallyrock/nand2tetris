@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
-fout = open("And.tst", 'w')
-fout.write("load And.hdl,\n")
+fout = open("../And.tst", 'w')
+fout.write("load ../And.hdl,\n")
 fout.write("output-file And.out,\n")
 fout.write("compare-to And.cmp,\n")
 fout.write("output-list a%B3.1.3 b%B3.1.3 out%B3.1.3;\n\n")
