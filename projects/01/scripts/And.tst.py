@@ -6,7 +6,7 @@ fout.write("output-file And.out,\n")
 fout.write("compare-to And.cmp,\n")
 fout.write("output-list a%B3.1.3 b%B3.1.3 out%B3.1.3;\n\n")
 
-eval = "set %c %d"
+ss = "set %c %d"
 
 for i in range(2):
     for j in range(2):
