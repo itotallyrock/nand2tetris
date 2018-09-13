@@ -4,7 +4,7 @@ output-file Or16.out,
 compare-to Or16.cmp,
 output-list a%B3.16.3 b%B3.16.3 out%B3.16.3;
 
-// Used these six test cases because it there were over 256 possiblities
+// Used these six test cases because it there were over 256 possibilities
 
 
 set a %B0000000000000000,

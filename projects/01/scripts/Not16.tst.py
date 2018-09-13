@@ -10,7 +10,7 @@ output-file Not16.out,
 compare-to Not16.cmp,
 output-list in%B3.16.3 out%B3.16.3;
 
-// Used these four test cases because it there were over 256 possiblities
+// Used these four test cases because it there were over 256 possibilities
 
 """)
 # Test Cases

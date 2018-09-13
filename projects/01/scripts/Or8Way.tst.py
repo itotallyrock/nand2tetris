@@ -10,7 +10,7 @@ output-file Or8Way.out,
 compare-to Or8Way.cmp,
 output-list in%B3.8.3 out%B3.1.3;
 
-// Used these four test cases because it there were 256 possiblities
+// Used these four test cases because it there were 256 possibilities
 
 """)
 # Test Cases

@@ -10,7 +10,7 @@ output-file Mux4Way16.out,
 compare-to Mux4Way16.cmp,
 output-list a%B3.16.3 b%B3.16.3  c%B3.16.3 d%B3.16.3 sel%B3.2.3 out%B3.16.3;
 
-// Used these four test cases because it there were over 256 possiblities
+// Used these four test cases because it there were over 256 possibilities
 
 """)
 # Test Cases
