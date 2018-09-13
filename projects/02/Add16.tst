@@ -4,7 +4,7 @@ output-file Add16.out,
 compare-to Add16.cmp,
 output-list a%B3.16.3 b%B3.16.3 out%B3.16.3;
 
-// Used these 6 cases because there were over 256 possiblities
+// Used these 6 cases because there were over 256 possibilities
 
 
 set a %B0000000000000000,

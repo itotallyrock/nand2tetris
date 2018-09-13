@@ -10,7 +10,7 @@ output-file Mux8Way16.out,
 compare-to Mux8Way16.cmp,
 output-list a%B3.16.3 b%B3.16.3  c%B3.16.3 d%B3.16.3 e%B3.16.3 f%B3.16.3 g%B3.16.3 h%B3.16.3 sel%B3.3.3 out%B3.16.3;
 
-// Used these eight test cases because it there were over 256 possiblities
+// Used these eight test cases because it there were over 256 possibilities
 
 """)
 # Test Cases
