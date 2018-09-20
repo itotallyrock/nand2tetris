@@ -19,10 +19,12 @@ zero = "0000000000000000"
 one = "1111111111111111"
 alt_a = "1010101010101010"
 alt_b = "0101010101010101"
+half_a = "1111111100000000"
+half_b = "0000000011111111"
 
 
 
-for i in range(6):
+for i in range(10):
     if i == 0:
         a = zero
         b = zero
@@ -38,9 +40,21 @@ for i in range(6):
     elif i == 4:
         a = alt_a
         b = zero
-    else:
+    elif i == 5:
         a = alt_a
         b = one
+    elif i == 6:
+        a = half_a
+        b = half_b
+    elif i == 7:
+        a = half_a
+        b = zero
+    elif i == 8:
+        a = half_a
+        b = one
+    else:
+        a = half_a
+        b = alt_b
     fout.write("""
 set x %B{a},
 set y %B{b},
