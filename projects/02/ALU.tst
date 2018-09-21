@@ -4,7 +4,7 @@ output-file ALU.out,
 compare-to ALU.cmp,
 output-list x%B3.16.3 y%B3.16.3 zx%B3.1.3 nx%B3.1.3 zy%B3.1.3 ny%B3.1.3 f%B3.1.3 no%B3.1.3 out%B3.16.3 zr%B3.1.3 ng%B3.1.3;
 
-// Used these 6 cases because there were over 256 possibilities
+// Used these 10 cases because there were over 256 possibilities
 
 
 set x %B0000000000000000,
