@@ -17,6 +17,7 @@ CHIP RAM64 {
     PARTS:
       // Use least significant 3 bits to determine which ram to use most significant bits in
       DMux8Way(in=load, sel=address[3..5], a=setA, b=setB, c=setC, d=setD, e=setE, f=setF, g=setG, h=setH);
+      // Use RAM8 for each of the 8 addresses
       RAM8(in=in, load=setA, address=address[0..2], out=dataA);
       RAM8(in=in, load=setB, address=address[0..2], out=dataB);
       RAM8(in=in, load=setC, address=address[0..2], out=dataC);
@@ -25,5 +26,6 @@ CHIP RAM64 {
       RAM8(in=in, load=setF, address=address[0..2], out=dataF);
       RAM8(in=in, load=setG, address=address[0..2], out=dataG);
       RAM8(in=in, load=setH, address=address[0..2], out=dataH);
+      // Return selected Ram8
       Mux8Way16(sel=address[3..5], a=dataA, b=dataB, c=dataC, d=dataD, e=dataE, f=dataF, g=dataG, h=dataH, out=out);
 }
