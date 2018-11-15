@@ -14,7 +14,8 @@ CHIP Bit {
   OUT out;
 
   PARTS:
+    // Select if need to use existing or input
     Mux(a=data, b=in, sel=load, out=selected);
-    DFF(in=selected, out=data);
-    Or(a=data, b=data, out=out);
+    // Update stored value
+    DFF(in=selected, out=data, out=out);
 }
