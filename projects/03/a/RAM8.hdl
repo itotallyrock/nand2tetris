@@ -15,7 +15,9 @@ CHIP RAM8 {
   OUT out[16];
 
   PARTS:
+    // Get values from address
     DMux8Way(in=load, sel=address, a=setA, b=setB, c=setC, d=setD, e=setE, f=setF, g=setG, h=setH);
+    // Use each register if it is selected address
     Register(in=in, load=setA, out=dataA);
     Register(in=in, load=setB, out=dataB);
     Register(in=in, load=setC, out=dataC);
@@ -24,5 +26,6 @@ CHIP RAM8 {
     Register(in=in, load=setF, out=dataF);
     Register(in=in, load=setG, out=dataG);
     Register(in=in, load=setH, out=dataH);
+    // Return the register with current address
     Mux8Way16(a=dataA, b=dataB, c=dataC, d=dataD, e=dataE, f=dataF, g=dataG, h=dataH, sel=address, out=out);
 }
