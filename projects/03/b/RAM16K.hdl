@@ -1,0 +1,27 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/03/b/RAM16K.hdl
+
+/**
+ * Memory of 16K registers, each 16 bit-wide. Out holds the value
+ * stored at the memory location specified by address. If load==1, then
+ * the in value is loaded into the memory location specified by address
+ * (the loaded value will be emitted to out from the next time step onward).
+ */
+
+CHIP RAM16K {
+    IN in[16], load, address[14];
+    OUT out[16];
+
+    PARTS:
+      // Use least significant 3 bits to determine which ram to use most significant bits in
+      DMux4Way(in=load, sel=address[12..13], a=setA, b=setB, c=setC, d=setD);
+      // Use RAM4k for each of the 8 addresses
+      RAM4K(in=in, load=setA, address=address[0..11], out=dataA);
+      RAM4K(in=in, load=setB, address=address[0..11], out=dataB);
+      RAM4K(in=in, load=setC, address=address[0..11], out=dataC);
+      RAM4K(in=in, load=setD, address=address[0..11], out=dataD);
+      // Return selected Ram8
+      Mux4Way16(sel=address[12..13], a=dataA, b=dataB, c=dataC, d=dataD, out=out);
+}
