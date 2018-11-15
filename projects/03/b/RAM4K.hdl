@@ -1,0 +1,31 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/03/b/RAM4K.hdl
+
+/**
+ * Memory of 4K registers, each 16 bit-wide. Out holds the value
+ * stored at the memory location specified by address. If load==1, then
+ * the in value is loaded into the memory location specified by address
+ * (the loaded value will be emitted to out from the next time step onward).
+ */
+
+CHIP RAM4K {
+    IN in[16], load, address[12];
+    OUT out[16];
+
+    PARTS:
+      s// Use least significant 3 bits to determine which ram to use most significant bits in
+      DMux8Way(in=load, sel=address[9..11], a=setA, b=setB, c=setC, d=setD, e=setE, f=setF, g=setG, h=setH);
+      // Use RAM512 for each of the addresses
+      RAM512(in=in, load=setA, address=address[0..8], out=dataA);
+      RAM512(in=in, load=setB, address=address[0..8], out=dataB);
+      RAM512(in=in, load=setC, address=address[0..8], out=dataC);
+      RAM512(in=in, load=setD, address=address[0..8], out=dataD);
+      RAM512(in=in, load=setE, address=address[0..8], out=dataE);
+      RAM512(in=in, load=setF, address=address[0..8], out=dataF);
+      RAM512(in=in, load=setG, address=address[0..8], out=dataG);
+      RAM512(in=in, load=setH, address=address[0..8], out=dataH);
+      // Return selected Ram512
+      Mux8Way16(sel=address[9..11], a=dataA, b=dataB, c=dataC, d=dataD, e=dataE, f=dataF, g=dataG, h=dataH, out=out);
+}
