@@ -2,6 +2,14 @@ tools
 .directory
 *.out
 
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
+*.synctex.gz
+
+
+projects/01
 projects/04
 projects/05
 projects/06
