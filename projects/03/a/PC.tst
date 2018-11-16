@@ -3,6 +3,12 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/PC.tst
 
+
+
+// I believe this test in not comprehensive enough for the PC because there are
+// very few test cases to fully cover the functionality of the PC.
+
+
 load PC.hdl,
 output-file PC.out,
 compare-to PC.cmp,
