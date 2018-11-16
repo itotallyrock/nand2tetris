@@ -3,6 +3,11 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/b/RAM4K.tst
 
+
+// I believe this test file is comprehensive enough because it tests to make
+// sure that the addresses are changing, then it tests to make sure multiple
+// numbers work in the input, while setting the input to true and false.
+
 load RAM4K.hdl,
 output-file RAM4K.out,
 compare-to RAM4K.cmp,

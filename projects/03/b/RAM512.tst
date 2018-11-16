@@ -3,6 +3,11 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/b/RAM512.tst
 
+
+// I believe this test file is comprehensive enough because it tests to make
+// sure that the addresses are changing, then it tests to make sure multiple
+// numbers work in the input, while setting the input to true and false.
+
 load RAM512.hdl,
 output-file RAM512.out,
 compare-to RAM512.cmp,
@@ -1024,4 +1029,3 @@ output;
 set address %B111101010,
 eval,
 output;
-

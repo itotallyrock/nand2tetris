@@ -3,6 +3,11 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/b/RAM16K.tst
 
+
+// I believe this test file is comprehensive enough because it tests to make
+// sure that the addresses are changing, then it tests to make sure multiple
+// numbers work in the input, while setting the input to true and false.
+
 load RAM16K.hdl,
 output-file RAM16K.out,
 compare-to RAM16K.cmp,
