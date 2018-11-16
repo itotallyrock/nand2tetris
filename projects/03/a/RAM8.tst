@@ -3,6 +3,13 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/RAM8.tst
 
+
+// I believe this test file is a comprehensive test of the RAM8 because
+// it chooses many different inputs and addresses, and makes sure to test one
+// with load as true, and one with load a false.
+
+
+
 load RAM8.hdl,
 output-file RAM8.out,
 compare-to RAM8.cmp,
@@ -557,4 +564,3 @@ output;
 set address 7,
 eval,
 output;
-

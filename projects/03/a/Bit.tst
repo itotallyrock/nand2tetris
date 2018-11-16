@@ -3,6 +3,12 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/Bit.tst
 
+
+// I think this test file is a full comprehensive test of the Bit because it
+// goes through many tests setting the input and output to true and false while
+// incrementing the clock time.
+
+
 load Bit.hdl,
 output-file Bit.out,
 compare-to Bit.cmp,

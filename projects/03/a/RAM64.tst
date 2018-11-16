@@ -3,6 +3,12 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/RAM64.tst
 
+
+// I think this test file is a comprehensive test of RAM64 because it cycles
+// through different inputs and addresses, while changing the load for each
+// input from true and false.
+
+
 load RAM64.hdl,
 output-file RAM64.out,
 compare-to RAM64.cmp,

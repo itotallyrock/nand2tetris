@@ -3,6 +3,13 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/Register.tst
 
+
+// I don't think this test file completely tests the Register because most of
+// the inputs for load and in are repeated, and not all in's are tested with a
+// load 0 and 1.
+
+
+
 load Register.hdl,
 output-file Register.out,
 compare-to Register.cmp,
